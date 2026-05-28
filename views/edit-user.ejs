@@ -6,7 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    
+        <style>
+        form .div{
+            padding: 5px;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+        }
+        form .div label{
+            font-weight: 800;
+            margin-right: 5px;
+        }
+        form .div input{
+            border: 1px solid lightgray;
+            outline: none;
+            margin-left: 4px;
+            border-radius: 3px;
+            padding: 3px;
 
+        }
+        form button{
+                background-color: green;
+                padding: 7px;
+                border-radius: 6px;
+                color: white;
+                outline: none;
+                border: 0;
+                cursor: pointer;
+                margin-top: 5px;
+        }
+        form a{
+            margin-left: 80%;
+            font-style: italic;
+        }
+    
+    </style>
 <body>
    <body>
 
@@ -22,19 +57,19 @@
 
     <form action="/edit/<%= user.id %>?_method=PUT" method="POST">
 
-        <div class="mb-3">
+        <div class="div">
             <label>Name</label>
             <input type="text" name="name" class="form-control"
                 value="<%= user.name %>" required>
         </div>
 
-        <div class="mb-3">
+        <div class="div">
             <label>Email</label>
             <input type="email" name="email" class="form-control"
                 value="<%= user.email %>" required>
         </div>
 
-        <div class="mb-3">
+        <div class="div">
             <label>Age</label>
             <input type="number" name="age" class="form-control"
                 value="<%= user.age %>" required>
